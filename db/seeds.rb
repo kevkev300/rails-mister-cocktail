@@ -1,6 +1,8 @@
 # destroy all
-Cocktail.destroy_all
-Ingredient.destroy_all
+if Rails.env.development?
+  Cocktail.destroy_all
+  Ingredient.destroy_all
+end
 
 # create all
 lemon = Ingredient.create(name: "lemon")

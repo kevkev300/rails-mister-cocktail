@@ -14,7 +14,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <h1>Amazing Cocktails by RailsMisterCocktail!</h1>
+      <%= yield %>
+    </div>
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
