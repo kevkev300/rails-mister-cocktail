@@ -4,16 +4,23 @@ if Rails.env.development?
   Ingredient.destroy_all
 end
 
-# create all
+### create all
+# create ingredients
 lemon = Ingredient.create(name: "lemon")
 ice = Ingredient.create(name: "ice")
 mint = Ingredient.create(name: "mint leaves")
 
-mojito = Cocktail.create(name: "Mojito")
-
-Dose.create(description: "1", ingredient: lemon, cocktail: mojito)
-Dose.create(description: "fill with", ingredient: ice, cocktail: mojito)
-Dose.create(description: "5", ingredient: mint, cocktail: mojito)
+# create cocktails
+# Cocktail.create(name: "Mojito", photo: "")
+Cocktail.create(name: "Cosmopolitan", photo: "ltl71pw9jholcomsk6gp")
+# Cocktail.create(name: "Jacky Coke", photo: "")
+# Cocktail.create(name: "Caipirinha", photo: "")
+# Cocktail.create(name: "Hurricane", photo: "")
+# Cocktail.create(name: "Long Island", photo: "")
+# Cocktail.create(name: "Gin tonic", photo: "")
+# Cocktail.create(name: "Old Fashioned", photo: "")
+# Cocktail.create(name: "Pisco Sour", photo: "")
+# Cocktail.create(name: "Manhatten", photo: "")
 
 # count all
 p "Ingredients: #{Ingredient.count}"
