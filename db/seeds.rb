@@ -12,7 +12,7 @@ mint = Ingredient.create(name: "mint leaves")
 
 # create cocktails
 # Cocktail.create(name: "Mojito", photo: "")
-Cocktail.create(name: "Cosmopolitan", photo: "ltl71pw9jholcomsk6gp")
+Cocktail.create(name: "Cosmopolitan")
 # Cocktail.create(name: "Jacky Coke", photo: "")
 # Cocktail.create(name: "Caipirinha", photo: "")
 # Cocktail.create(name: "Hurricane", photo: "")

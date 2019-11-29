@@ -1,10 +1,17 @@
 <h2>List of our cocktails</h2>
 <ul>
   <% @cocktails.each do |cocktail| %>
-    <li>
+  <li>
+
+    <% if cocktail.photo.url.nil? %>
+      <%= image_tag  "https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80", height: 100, width: 100 %>
+    <% else %>
       <%= cl_image_tag cocktail.photo, height: 100, width: 100 %>
-      <%= link_to cocktail.name, cocktail_path(cocktail) %>
-    </li>
+    <% end %>
+
+    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+  </li>CLOUDINARY_URL=cloudinary://264576781982117:Ot-HsQ17YAmJFGH2Bpj7mIco5j4@kl3000
+
   <% end %>
 </ul>
 <%= link_to "Create a new cocktail...", new_cocktail_path %>
