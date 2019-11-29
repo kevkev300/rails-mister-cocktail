@@ -14,4 +14,8 @@
 </br>
 </br>
 <h4>Add an ingredient:</h4>
-<%= render 'form_dose' %>
+<%= simple_form_for ([@cocktail, @dose]) do |f| %>
+  <%= f.association :ingredient, label: "Ingredient:" %>
+  <%= f.input :description, label: "Quantity" %>
+  <%= f.submit "Add the ingredient!" %>
+<% end %>
